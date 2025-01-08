@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "roles", schema = "tms")
+@Table(name = "roles", schema = "sst")
 @Getter
 @Setter
 @AllArgsConstructor
@@ -16,7 +16,7 @@ import lombok.Setter;
 public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "roles_seq")
-    @SequenceGenerator(name = "roles_seq", sequenceName = "roles_seq", schema = "tms")
+    @SequenceGenerator(name = "roles_seq", sequenceName = "roles_seq", schema = "sst")
     @Column(name = "id")
     @JsonIgnore
     private Long id;

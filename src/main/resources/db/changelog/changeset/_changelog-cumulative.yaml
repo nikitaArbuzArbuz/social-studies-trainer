@@ -26,19 +26,19 @@ databaseChangeLog:
   - changeSet:
       id: 003-095415112024-create-tables
       author: Nikita Pushkin
-      comment: Create tables in tms schema
+      comment: Create tables in sst schema
       runOnChange: true
       changes:
         - sqlFile:
             path: 003-095415112024-create-tables.sql
             relativeToChangelogFile: true
-
-  - changeSet:
-      id: 004-095815112024-insert-roles
-      author: Nikita Pushkin
-      comment: Insert data into table roles
-      runOnChange: true
-      changes:
-        - sqlFile:
-            path: 004-095815112024-insert-roles.sql
-            relativeToChangelogFile: true
+#
+#  - changeSet:
+#      id: 004-095815112024-insert-roles
+#      author: Nikita Pushkin
+#      comment: Insert data into table roles
+#      runOnChange: true
+#      changes:
+#        - sqlFile:
+#            path: 004-095815112024-insert-roles.sql
+#            relativeToChangelogFile: true

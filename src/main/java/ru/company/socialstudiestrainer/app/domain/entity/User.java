@@ -16,11 +16,11 @@ import java.util.Set;
 @AllArgsConstructor
 @NoArgsConstructor
 @ToString
-@Table(name = "users", schema = "tms")
+@Table(name = "users", schema = "sst")
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "users_seq")
-    @SequenceGenerator(name = "users_seq", sequenceName = "users_seq", schema = "tms")
+    @SequenceGenerator(name = "users_seq", sequenceName = "users_seq", schema = "sst")
     @Column(name = "id")
     private Long id;
 
@@ -47,7 +47,7 @@ public class User {
     private String password;
 
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "user_roles", schema = "tms",
+    @JoinTable(name = "user_roles", schema = "sst",
             joinColumns = @JoinColumn(name = "user_id"),
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     @Builder.Default
